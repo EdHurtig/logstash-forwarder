@@ -65,6 +65,9 @@ func init() {
 
 	flag.StringVar(&options.cpuProfileFile, "cpuprofile", options.cpuProfileFile, "path to cpu profile output - note: exits on profile end.")
 
+	flag.Uint64Var(&options.idleTimeout, "idle-timeout", options.idleTimeout, "maximium time (seconds) events are held before being they are flushed")
+	flag.Uint64Var(&options.idleTimeout, "it", options.idleTimeout, "maximium time (seconds) are held before being they are flushed")
+
 	flag.Uint64Var(&options.spoolSize, "spool-size", options.spoolSize, "event count spool threshold - forces network flush")
 	flag.Uint64Var(&options.spoolSize, "sv", options.spoolSize, "event count spool threshold - forces network flush")
 
